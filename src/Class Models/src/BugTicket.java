@@ -1,31 +1,47 @@
 import java.time.LocalDateTime;
 import java.util.List;
 
-
 public class BugTicket extends TicketMeta {
-    //Fields Specific to the BugTicket class
-    private String severity;
-    private String description;
+    // Fields Specific to BugTicket
+    private String severity; // Bug severity
+    private List<String> stepsRepeatable; // Steps to reproduce the bug
 
-    //Local Date Time fields for creation date and updated date
-    private LocalDateTime dateCreated;
-    private LocalDateTime dateUpdated;
+    // Derived Class Parameterized Constructor
+    public BugTicket(Long id, String title, String description, String status, String priority, String assignedTo,
+                     LocalDateTime dateCreated, LocalDateTime dateUpdated, String severity, List<String> stepsRepeatable) {
+        // Call Parent Constructor
+        super(id, title, description, status, priority, assignedTo, dateCreated, dateUpdated);
 
-    //List of steps that can be repeated to create bugs
-    private List<String> stepsRepeatable;
-
-
-    public BugTicket(String title, String description, String severity, List<String> stepsRepeatable) {
-        super(title);
-        this.description = description;
+        // Initialize BugTicket-Specific Fields
         this.severity = severity;
         this.stepsRepeatable = stepsRepeatable;
     }
+
+    // Mutators (Getters and Setters)
+
+    // Severity
+    public String getSeverity() {
+        return severity;
+    }
+    public void setSeverity(String severity) {
+        this.severity = severity;
+    }
+
+    // Steps Repeatable
+    public List<String> getStepsRepeatable() {
+        return stepsRepeatable;
+    }
+    public void setStepsRepeatable(List<String> stepsRepeatable) {
+        this.stepsRepeatable = stepsRepeatable;
+    }
+
+    // Override toString() for Debugging
+    @Override
+    public String toString() {
+        return super.toString() +
+                ", BugTicket{" +
+                "severity='" + severity + '\'' +
+                ", stepsRepeatable=" + stepsRepeatable +
+                '}';
+    }
 }
-
-
-
-public void main(){
-
-}
-
