@@ -25,3 +25,24 @@ Child Class: Ticket - Ticket Meta
 - status (type ticketStatus(open, in_progress, complete))
 - assigned user (derived from user)
 
+....................................
+11/29/2024
+Adding the Users Class to better modify and manage Ticket objects
+------------------------------------
+In this stage of the project, I decided to create a series of classes for the users of this ticketing system. The users have different priviledges depending
+on their level (viewer, staff, manager, admin). Their title corresponds to what fields and methods they get access to. Ultimately, the user class will serve as a template for general fields and methods all the other users have access to. These range from:
+- viewing tickets
+- generating reports
+- access settings
+- etc.
+
+Here is a generla map of the classes I will be creating for the users:
+- user 
+  - viewer (may be redundant to the base class since they have the least amount of permissions)
+  - staff
+  - manager
+  - admin
+
+After this, the plan would be to refine the Ticket meta class and the sub class counterparts to allow the user objects to modify the ticket instances instead of them being isolated.
+
+
