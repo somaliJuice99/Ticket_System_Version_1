@@ -44,8 +44,8 @@ public class User {
     public String getPermissions (){return permissions;}
     public void setPermissions(String permissions) {this.permissions = permissions;}
 
-    public String getPosition (){return position;}
-    public void setPosition(String position) {this.position = position;}
+    public String getPosition(){return position;}
+    public void setPosition(String position){this.position = position;}
 
     public String getDateOfHire (){return dateOfHire;}
     public void setDateOfHire(String dateOfHire) {this.dateOfHire = dateOfHire;}
