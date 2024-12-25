@@ -45,4 +45,10 @@ Here is a general map of the classes I will be creating for the users:
 
 After this, the plan would be to refine the Ticket meta class and the sub class counterparts to allow the user objects to modify the ticket instances instead of them being isolated.
 
+----------------------------------------
+12/25/24
+
+Refer to this Notion link for future project changes:
+https://www.notion.so/1675724da9fb801c9220c7f7b58cf3e1?v=1675724da9fb80dd8fd8000c639847af&p=1675724da9fb80c2b9f8cba28dfab127&pm=s
+
 
